@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Prediction: {{ label }}</h2>
+    <h3>Confidence: {{ prob }}%</h3>
+
+    <h3>Uploaded Image:</h3>
+    <img src="/static/uploads/{{ original }}" alt="Original X-ray">
+
+    <h3>Grad-CAM Heatmap:</h3>
+    <img src="/static/uploads/{{ heatmap }}" alt="Heatmap Result">
+
+    <br><br>
+    <a class="button" href="/">Try Another</a>
+  </div>
+</body>
+</html>

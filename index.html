@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Pneumonia Detection</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Pneumonia Detection</h1>
+    <p>Please upload a chest X-ray image below.</p>
+    
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*" required>
+      <input type="submit" value="Predict">
+    </form>
+  </div>
+</body>
+</html>
